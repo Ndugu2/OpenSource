@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,7 +51,7 @@
             
             resources.forEach(res => {
                 const title = res.querySelector('h3').innerText;
-                if (title.indexOf(input) > -1) {
+                if (title.toLowerCase().indexOf(input.toLowerCase()) > -1) {
                     res.style.display = "";
                 } else {
                     res.style.display = "none";
@@ -61,3 +61,4 @@
     </script>
 </body>
 </html>
+
