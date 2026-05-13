@@ -28,6 +28,12 @@
             <input type="text" id="searchInput" placeholder="Search resources..." onkeyup="searchResources()">
         </div>
 
+                <div style="margin-bottom: 20px;">
+            <button onclick="filterCategory('All')">All</button>
+            <button onclick="filterCategory('Health')">Health</button>
+            <button onclick="filterCategory('Education')">Education</button>
+            <button onclick="filterCategory('Tech')">Tech</button>
+        </div>
         <div id="resourceList">
             <div class="resource" data-category="Health">
                 <h3>Rural Health Guidelines 2026</h3>
@@ -55,6 +61,16 @@
             resources.forEach(res => {
                 const title = res.querySelector('h3').innerText;
                 if (title.toLowerCase().indexOf(input.toLowerCase()) > -1) {
+                    res.style.display = "";
+                } else {
+                    res.style.display = "none";
+                }
+            });
+        }
+            function filterCategory(category) {
+            const resources = document.querySelectorAll('.resource');
+            resources.forEach(res => {
+                if (category === 'All' || res.getAttribute('data-category') === category) {
                     res.style.display = "";
                 } else {
                     res.style.display = "none";
