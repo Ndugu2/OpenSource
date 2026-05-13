@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <header>
+                <header>
+            <div style="text-align: right; font-size: 0.8em; margin-bottom: 10px;">
+                <a href="?lang=en" style="color: white;">English</a> | <a href="?lang=lg" style="color: white;">Luganda</a>
+            </div>
             <h1>BOSC Community Library</h1>
             <p>Your open-source repository for public sector resources.</p>
         </header>
@@ -17,6 +20,12 @@
             <input type="text" id="searchInput" placeholder="Search resources..." onkeyup="searchResources()">
         </div>
 
+                <div style="margin-bottom: 20px;">
+            <button onclick="filterCategory('All')">All</button>
+            <button onclick="filterCategory('Health')">Health</button>
+            <button onclick="filterCategory('Education')">Education</button>
+            <button onclick="filterCategory('Tech')">Tech</button>
+        </div>
         <div id="resourceList">
             <div class="resource" data-category="Health">
                 <h3>Rural Health Guidelines 2026</h3>
@@ -26,7 +35,7 @@
             <div class="resource" data-category="Education">
                 <h3>Digital Literacy Syllabus</h3>
                 <p>Curriculum for secondary schools.</p>
-                <a href="/missing-link.pdf" class="dead-link" id="doc-link">Download PDF</a>
+                <a href="https://example.com/education-syllabus.pdf" class="valid-link" id="doc-link">Download PDF</a>
             </div>
             <div class="resource" data-category="Tech">
                 <h3>Open Source Compliance Guide</h3>
