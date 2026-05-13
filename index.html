@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOSC Community Library</title>
-    <style>
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; background-color: #f4f7f6; }
-        header { background-color: #005f73; color: white; padding: 20px; text-align: center; border-radius: 8px; }
-        .container { max-width: 800px; margin: 20px auto; }
-        .resource { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .resource h3 { margin: 0 0 10px 0; color: #0a9396; }
-        .dead-link { color: red; text-decoration: none; }
-        #searchInput { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
@@ -53,31 +45,7 @@
         </div>
     </div>
     
-    <script>
-        function searchResources() {
-            const input = document.getElementById('searchInput').value;
-            const resources = document.querySelectorAll('.resource');
-            
-            resources.forEach(res => {
-                const title = res.querySelector('h3').innerText;
-                if (title.toLowerCase().indexOf(input.toLowerCase()) > -1) {
-                    res.style.display = "";
-                } else {
-                    res.style.display = "none";
-                }
-            });
-        }
-            function filterCategory(category) {
-            const resources = document.querySelectorAll('.resource');
-            resources.forEach(res => {
-                if (category === 'All' || res.getAttribute('data-category') === category) {
-                    res.style.display = "";
-                } else {
-                    res.style.display = "none";
-                }
-            });
-        }
-    </script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 

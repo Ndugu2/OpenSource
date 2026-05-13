@@ -1,0 +1,7 @@
+﻿body { font-family: 'Inter', sans-serif; margin: 0; padding: 20px; background-color: #f4f7f6; }
+header { background-color: #005f73; color: white; padding: 20px; text-align: center; border-radius: 8px; }
+.container { max-width: 800px; margin: 20px auto; }
+.resource { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.resource h3 { margin: 0 0 10px 0; color: #0a9396; }
+.dead-link { color: red; text-decoration: none; }
+#searchInput { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
